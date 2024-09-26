@@ -6,8 +6,9 @@ from sklearn.metrics import mean_squared_error
 import joblib
 import datetime
 import itertools
+from db import get_db_connection
 
-db_uri = 'mysql+pymysql://root:@localhost/bcnetwork'
+db_uri = get_db_connection()
 engine = create_engine(db_uri)
 
 
